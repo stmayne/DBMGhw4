@@ -25,7 +25,6 @@ CREATE TABLE SIM_Person
     title            VARCHAR2 (255) ,
     rating           VARCHAR2 (255) ,
     bonus            INTEGER ,
-    dept_id          INTEGER ,
     relation_id      INTEGER NOT NULL ,
     SIM_dept_dept_id INTEGER
   ) ;
@@ -48,7 +47,7 @@ CREATE UNIQUE INDEX SIM_dept__IDX ON SIM_dept
 CREATE TABLE SIM_project
   (
     project_id       INTEGER NOT NULL ,
-    name             VARCHAR2 (name) ,
+    name             VARCHAR2 (255) ,
     SIM_dept_dept_id INTEGER NOT NULL
   ) ;
 ALTER TABLE SIM_project ADD CONSTRAINT SIM_project_PK PRIMARY KEY ( project_id ) ;
